@@ -1,3 +1,36 @@
 ## Next.js App Router Course - Starter
 
 - for learning purpose
+
+# chapter - 1 (basic of projects)
+
+## Folder structure
+
+You'll notice that the project has the following folder structure:
+
+```md
+- /app: Contains all the routes, components, and logic for your application, this is where you'll be mostly working from.
+- /app/lib: Contains functions used in your application, such as reusable utility functions and data fetching functions.
+- /app/ui: Contains all the UI components for your application, such as cards, tables, and forms. To save time, we've pre-styled these components for you.
+- /public: Contains all the static assets for your application, such as images.
+- Config Files: You'll also notice config files such as next.config.ts at the root of your application. Most of these files are created and pre-configured when you start a new project using create-next-app. You will not need to modify them in this course.
+```
+
+## Placeholder data
+
+When you're building user interfaces, it helps to have some placeholder data. If a database or API is not yet available, you can:
+
+Use placeholder data in JSON format or as JavaScript objects.
+Use a 3rd party service like mockAPI.
+
+# TypeScript
+
+You may also notice most files have a .ts or .tsx suffix. This is because the project is written in TypeScript. We wanted to create a course that reflects the modern web landscape.
+
+It's okay if you don't know TypeScript - we'll provide the TypeScript code snippets when required.
+
+--- chapter 1 completed ---
+
+---
+
+# chapter - 2 (tailwind & css)
