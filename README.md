@@ -28,10 +28,11 @@ Use a 3rd party service like mockAPI.
 # TypeScript
 
 files have a .ts or .tsx suffix, because the project is written in TypeScript.
-
---- chapter 1 completed (Setting up the project)---
+ 
+chapter 1 completed (Setting up the project)
 
 ---
+
 
 # chapter - 2 (diffrent ways of applying css )
 tailwind & vanilla css
