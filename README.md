@@ -44,6 +44,8 @@ tailwind & vanilla css
 
 notes :-
 
+```html
+
 i) always import global css on root layout ex: /app/layout.tsx
 
 applying tailwing
@@ -54,6 +56,7 @@ applying tailwing
 />
 <code>
 
+```
 
 CSS Modules
 CSS Modules allow you to scope CSS to a component by automatically creating unique class names, so you don't have to worry about style collisions as well.
