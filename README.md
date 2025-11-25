@@ -27,15 +27,14 @@ Use a 3rd party service like mockAPI.
 
 # TypeScript
 
-You may also notice most files have a .ts or .tsx suffix. This is because the project is written in TypeScript. We wanted to create a course that reflects the modern web landscape.
+files have a .ts or .tsx suffix, because the project is written in TypeScript.
 
-It's okay if you don't know TypeScript - we'll provide the TypeScript code snippets when required.
-
---- chapter 1 completed ---
+--- chapter 1 completed (Setting up the project)---
 
 ---
 
-# chapter - 2 (tailwind & css)
+# chapter - 2 (diffrent ways of applying css )
+tailwind & vanilla css
 
 1. How to add a global CSS file to your application.
 
