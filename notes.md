@@ -1,0 +1,122 @@
+## Next.js App Router Course - Starter
+
+- for learning purpose
+
+# chapter - 1 (basic of projects)
+
+## Folder structure
+
+folder structure:
+
+```md
+- /app: Contains all the routes, components, and logic for your application, this is where you'll be mostly working from.
+- /app/lib: Contains functions used in your application, such as reusable utility functions and data fetching functions.
+- /app/ui: Contains all the UI components for your application, such as cards, tables, and forms. To save time, we've pre-styled these components for you.
+- /public: Contains all the static assets for your application, such as images.
+- Config Files: You'll also notice config files such as next.config.ts at the root of your application. Most of these files are created and pre-configured when you start a new project using create-next-app. You will not need to modify them in this course.
+```
+
+## Placeholder data
+
+When you're building user interfaces, it helps to have some placeholder data. If a database or API is not yet available, you can:
+
+Use placeholder data in JSON format or as JavaScript objects.
+Use a 3rd party service like mockAPI.
+
+# TypeScript
+
+files have a .ts or .tsx suffix, because the project is written in TypeScript.
+
+chapter 1 completed (Setting up the project)
+
+---
+
+# chapter - 2 (diffrent ways of applying css )
+
+tailwind & vanilla css
+
+1. How to add a global CSS file to your application.
+
+2. Two different ways of styling: Tailwind and CSS modules.
+
+3. How to conditionally add class names with the clsx utility package.
+
+notes :-
+
+```html
+i) always import global css on root layout ex: /app/layout.tsx applying tailwing
+
+<code>
+  <div
+    className="relative w-0 h-0 border-l-[15px] border-r-[15px] border-b-[26px] border-l-transparent border-r-transparent border-b-black" />
+  <code> </code
+></code>
+```
+
+CSS Modules
+CSS Modules allow you to scope CSS to a component by automatically creating unique class names, so you don't have to worry about style collisions as well.
+
+We'll continue using Tailwind in this course, but let's take a moment to see how you can achieve the same results from the quiz above using CSS modules.
+
+Inside /app/ui, create a new file called home.module.css and add the following CSS rules:
+
+```css
+/app/ui/home.module.css .shape {
+  height: 0;
+  width: 0;
+  border-bottom: 30px solid black;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+```
+
+```tsx
+
+/app/page.tsx
+import AcmeLogo from '@/app/ui/acme-logo';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
+import styles from '@/app/ui/home.module.css';
+
+export default function Page() {
+  return (
+    <main className="flex min-h-screen flex-col p-6">
+      <div className={styles.shape} />
+    // ...
+  )
+}
+
+// to use css we can import as styles and use as styes.shape (here shape is basically the .shape )
+
+```
+
+### Using the clsx library to toggle class names
+
+clsx is a library that lets you toggle class names easily.
+
+Suppose that you want to create an InvoiceStatus component which accepts status. The status can be 'pending' or 'paid'.
+If it's 'paid', you want the color to be green. If it's 'pending', you want the color to be gray.
+You can use clsx to conditionally apply the classes, like this:
+
+```tsx
+
+import clsx from 'clsx';
+
+export default function InvoiceStatus({ status }: { status: string }) {
+  return (
+    <span
+      className={clsx(
+        'inline-flex items-center rounded-full px-2 py-1 text-sm',
+        {
+          'bg-gray-100 text-gray-500': status === 'pending',
+          'bg-green-500 text-white': status === 'paid',
+        },
+      )}
+    >
+    // ...
+)}
+
+```
+---
+
+# chapter 3 : Optimizing Fonts and Images
